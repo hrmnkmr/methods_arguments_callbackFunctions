@@ -1,3 +1,24 @@
+var obj = {
+	showText: function() {
+		console.log('Hello World');
+	}
+}
+obj.showText();
+var obj = {
+	showText: function(name) {
+		console.log('こんにちは、' + name + 'さん！');
+	}
+}
+obj.showText('太郎');
+var obj = {
+	showText: function(num) {
+		var result = num * num;
+		//計算した結果を戻り値として返す
+		return result;
+	}
+}
+console.log(obj.showText(10));
+
 function peach(price, func) {
 	const name = "ピーチ";
 	func(name, price);
