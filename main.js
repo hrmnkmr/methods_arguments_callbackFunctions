@@ -1,17 +1,13 @@
+// 税込価格を計算する関数
 function addTax(price) {
-	return Math.round(price * 1.10); // 税込み価格を計算して返す
+	return Math.round(price * 1.10); // 税率10%を適用し、四捨五入して税込価格を計算
+}
+// 税込価格を表示する関数
+function displayPrice(name, price) {
+	const taxPrice = addTax(price); // 税込価格を計算
+	console.log(name + " の税込価格は " + taxPrice + "円です。");
 }
 // トマトの税込み価格をコンソールに表示させる処理
-{
-	const name = "トマト";
-	const price = 200;
-	const taxPrice = addTax(price);
-	console.log(name + " の値段は " + taxPrice + "円です。"); // "トマト の値段は 200円です。" 
-}
+displayPrice("トマト", 200);
 // 玉ねぎの税込み価格をコンソールに表示させる処理
-{
-	const name = "玉ねぎ";
-	const price = 300;
-	const taxPrice = addTax(price);
-	console.log(name + " の値段は " + taxPrice + "円です。"); // "玉ねぎ の値段は 300円です。" 
-}
+displayPrice("玉ねぎ", 300);
